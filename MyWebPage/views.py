@@ -8,3 +8,7 @@ class IndexPageView(TemplateView):
     template_name = 'MyWebPage/index.html'
 
 
+
+class AboutPageView(TemplateView):
+    template_name = 'MyWebPage/about.html'
+
