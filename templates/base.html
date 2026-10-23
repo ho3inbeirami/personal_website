@@ -30,7 +30,11 @@
     <body>
         {% include "header.html" %}
         <main>
-            content
+            
+            {% block content %}
+                
+            {% endblock  %}
+                
         </main>
         {% include "info.html" %}
         {% include "footer.html" %}
