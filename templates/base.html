@@ -1,4 +1,6 @@
 {% load static %}
+{% load render_partial %}
+
 <html>
     <head>
         <!-- Basic -->
@@ -28,7 +30,7 @@
     </head>
 
     <body>
-        {% include "header.html" %}
+        {% render_partial 'MyWebPage.views.headerComponent'  %} 
         <main>
             
             {% block content %}
@@ -37,7 +39,8 @@
                 
         </main>
         {% include "info.html" %}
-        {% include "footer.html" %}
+        {% render_partial 'MyWebPage.views.footerComponent'  %}
+        
     </body>
 
 </html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="">
+
+    <div class="">
+        <div class="heading_container margin_top">
+            <h2>
+            Our Projects
+            </h2>
+        </div>
+        
+
+        {% for project in projects %}
+            <div class="proj_container">
+                <img src="{% static 'images/p-1.jpg' %}" alt="">
+                <div>
+                    <h1>{{project.title}}</h1>
+                    <p> {{project.description}} </p>
+                    <a href='{{project.github}}' class="button_container"> {{project.github}} </a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% endblock  %}
+    
